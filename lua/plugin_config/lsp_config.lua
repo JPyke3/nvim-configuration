@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "tsserver", "eslint", "omnisharp", "yamlls", "jsonls", "texlab", "svelte", "nil_ls" },
+	ensure_installed = { "lua_ls", "tsserver", "eslint", "omnisharp", "yamlls", "jsonls", "texlab", "svelte", "nil_ls", "bashls" },
 })
 
 require("lspconfig").lua_ls.setup {}
@@ -63,6 +63,7 @@ require("lspconfig").jsonls.setup {
 require("lspconfig").texlab.setup {}
 require("lspconfig").svelte.setup {}
 require("lspconfig").nil_ls.setup {}
+require("lspconfig").bashls.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

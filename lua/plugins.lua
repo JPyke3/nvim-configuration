@@ -78,6 +78,7 @@ return {
 	  opts = {},
 	  config = function(_, opts) require'lsp_signature'.setup(opts) end
 	},
+	'nvimtools/none-ls.nvim',
 	cmd = {
 		"TmuxNavigateLeft",
 		"TmuxNavigateDown",

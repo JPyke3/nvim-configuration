@@ -26,3 +26,5 @@ vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true })
 vim.api.nvim_set_keymap('n', 'n', 'nzzzv', { noremap = true })
 vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', { noremap = true })
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.o.splitright = true
+vim.api.nvim_create_user_command('R', 'vnew | r !#', {})

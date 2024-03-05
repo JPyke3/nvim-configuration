@@ -28,6 +28,7 @@ require("plugin_config.silicon_config")
 require("plugin_config.jsonpath_config")
 require("plugin_config.lualine_config")
 require("plugin_config.lspsignature_config")
+require("plugin_config.none_ls_config")
 require("personal_config.editor_preferences")
 require("personal_config.theme")
 
