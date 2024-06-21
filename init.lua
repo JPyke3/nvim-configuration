@@ -13,6 +13,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
+require("personal_config.editor_preferences")
+require("personal_config.theme")
 require("plugin_config.neoconf_config")
 require("plugin_config.lsp_config")
 require("plugin_config.nvim_cmp_config")
@@ -29,6 +31,4 @@ require("plugin_config.jsonpath_config")
 require("plugin_config.lualine_config")
 require("plugin_config.lspsignature_config")
 require("plugin_config.none_ls_config")
-require("personal_config.editor_preferences")
-require("personal_config.theme")
 

@@ -1,5 +1,6 @@
 return {
 	"folke/neodev.nvim",
+	'RRethy/base16-nvim',
 	{ "folke/which-key.nvim", event = "VeryLazy" },
 	"folke/neoconf.nvim",
 	"williamboman/mason.nvim",
@@ -38,15 +39,12 @@ return {
 		'nvim-telescope/telescope.nvim',
 		'nvim-tree/nvim-web-devicons',
 	},
-	'christoomey/vim-tmux-navigator',
-	'RyanMillerC/better-vim-tmux-resizer',
 	'lervag/vimtex',
 	{
 		'krivahtoo/silicon.nvim',
 		build = './install.sh',
 		branch = 'nvim-0.9'
 	},
-	'RRethy/base16-nvim',
 	'mogelbrod/vim-jsonpath',
 	'phelipetls/jsonpath.nvim',
 	'vimpostor/vim-tpipeline',

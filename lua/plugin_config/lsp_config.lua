@@ -1,8 +1,9 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "tsserver", "eslint", "omnisharp", "yamlls", "jsonls", "texlab", "svelte", "nil_ls", "bashls" },
+	ensure_installed = { "lua_ls", "tsserver", "eslint", "omnisharp", "yamlls", "jsonls", "texlab", "svelte", "bashls", "html", "prettier", "pyright"},
 })
 
+require("lspconfig").pyright.setup {}
 require("lspconfig").lua_ls.setup {}
 require("lspconfig").tsserver.setup {}
 require("lspconfig").eslint.setup {}
@@ -62,8 +63,23 @@ require("lspconfig").jsonls.setup {
 }
 require("lspconfig").texlab.setup {}
 require("lspconfig").svelte.setup {}
-require("lspconfig").nil_ls.setup {}
 require("lspconfig").bashls.setup {}
+require("lspconfig").html.setup {
+	settings = {
+		html = {
+			autoClosingTags = true,
+			autoCreateQuotes = true,
+			completion = {
+				 attributeDefaultValue = "doublequotes"
+			},
+			customData = {},
+			format = {
+				enable = true,
+			}
+		}
+	}
+}
+require("lspconfig").prettier.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
