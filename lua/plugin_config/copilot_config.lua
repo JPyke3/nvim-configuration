@@ -1,9 +1,6 @@
 -- Disable the default Tab mapping
 vim.g.copilot_no_tab_map = true
 
--- Accept Suggestion
-vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = false })
-
 -- Accept One Word
 vim.keymap.set('i', '<C-L>', '<Plug>(copilot-accept-word)')
 

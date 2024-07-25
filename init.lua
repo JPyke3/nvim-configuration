@@ -31,4 +31,6 @@ require("plugin_config.jsonpath_config")
 require("plugin_config.lualine_config")
 require("plugin_config.lspsignature_config")
 require("plugin_config.none_ls_config")
-
+require("plugin_config.codecompanion_config")
+require("plugin_config.lualine_extensions")
+require("plugin_config.tabby_config")

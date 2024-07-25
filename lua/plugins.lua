@@ -1,4 +1,5 @@
 return {
+	"TabbyML/vim-tabby",
 	"folke/neodev.nvim",
 	'RRethy/base16-nvim',
 	{ "folke/which-key.nvim", event = "VeryLazy" },
@@ -6,8 +7,14 @@ return {
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
-	"huggingface/llm.nvim",
 	"hrsh7th/nvim-cmp",
+	"olimorris/codecompanion.nvim",
+	"stevearc/dressing.nvim", -- Optional: Improves the default Neovim UI
+	  dependencies = {
+		"nvim-lua/plenary.nvim",
+		"nvim-treesitter/nvim-treesitter",
+		"nvim-telescope/telescope.nvim", -- Optional
+	  },
 	"hrsh7th/cmp-nvim-lsp",
 	"saadparwaiz1/cmp_luasnip",
 	"L3MON4D3/LuaSnip",
