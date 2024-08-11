@@ -5,14 +5,30 @@ require("mason-lspconfig").setup_handlers {
 	-- The first entry (without a key) will be the default handler
 	-- and will be called for each installed server that doesn't have
 	-- a dedicated handler.
-	function(server_name)      -- default handler (optional)
+	function(server_name) -- default handler (optional)
 		require("lspconfig")[server_name].setup {}
 	end,
 	-- Next, you can provide a dedicated handler for specific servers.
 	-- For example, a handler override for the `rust_analyzer`:
-	["rust_analyzer"] = function()
-		require("rust-tools").setup {}
-	end
+	["nil_ls"] = function()
+		require('lspconfig').nil_ls.setup {
+			settings = {
+				["nil"] = {
+					formatting = {
+						command = { "nix", "run", "nixpkgs#alejandra" },
+					},
+					nix = {
+						flake = {
+							-- calls `nix flake archive` to put a flake and its output to store
+							autoArchive = true,
+							-- auto eval flake inputs for improved completion
+							autoEvalInputs = true,
+						},
+					},
+				},
+			},
+		}
+	end,
 }
 
 -- Global mappings.

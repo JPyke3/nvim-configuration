@@ -22,6 +22,19 @@ require("codecompanion").setup({
 				},
 			},
 		}),
+		deepseek = require("codecompanion.adapters").use("ollama", {
+			schema = {
+				model = {
+					default = "deepseek-coder-v2:lite"
+				},
+				num_ctx = {
+					default = 16384
+				},
+				num_predict = {
+					default = -1
+				},
+			},
+		}),
 		codegemma = require("codecompanion.adapters").use("ollama", {
 			schema = {
 				model = {
@@ -32,7 +45,7 @@ require("codecompanion").setup({
 	},
 	strategies = {
 		chat = {
-			adapter = "llama3",
+			adapter = "deepseek",
 		},
 		inline = {
 			adapter = "codegemma",
